@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Soil Type Prediction</title>
+</head>
+<body>
+    <h1>Soil Type Prediction</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Predict Soil">
+    </form>
+    {% if predicted_class %}
+    <p>Predicted Class: {{ predicted_class }}</p>
+    {% endif %}
+</body>
+</html>
